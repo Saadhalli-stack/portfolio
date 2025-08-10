@@ -1,0 +1,628 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+.intro-title {
+  font-size: 2.2rem;
+  font-weight: 400;
+  color: #1a1a1a;
+  line-height: 1.5;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  text-align: center;
+  animation: fadeInUp 1.2s ease-in-out;
+}
+
+.intro-title strong {
+  color: #007bff;
+  font-weight: 700;
+}
+
+/* Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to bottom right, #fefcf8, #e6f4ea, #d8eafd); /* ivoire + vert doux + bleu clair */
+  background-attachment: fixed;
+  background-size: cover;
+  color: #2d2d2d;
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+
+#app {
+  max-width: 900px;
+  width: 100%;
+  background: #fff;
+  border-radius: 15px;
+  padding: 30px 40px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 40px;
+}
+
+header h1 {
+  font-weight: 700;
+  color: #007bff;
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+nav {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+button, select {
+  cursor: pointer;
+  background: #007bff;
+  border: none;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+  user-select: none;
+}
+
+button:hover, select:hover {
+  background: #0056b3;
+}
+
+select {
+  padding-right: 30px;
+  color: #fff;
+  appearance: none;
+  background-image:
+    linear-gradient(45deg, transparent 50%, white 50%),
+    linear-gradient(135deg, white 50%, transparent 50%),
+    linear-gradient(to right, #007bff, #007bff);
+  background-position:
+    calc(100% - 20px) calc(1em + 2px),
+    calc(100% - 15px) calc(1em + 2px),
+    100% 0;
+  background-size: 5px 5px, 5px 5px, 2.5em 2.5em;
+  background-repeat: no-repeat;
+}
+
+main {
+  position: relative;
+  min-height: 400px;
+}
+
+.avatar {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid #007bff;
+  margin: 0 auto 25px;
+  transition: transform 0.4s ease;
+  display: block;
+  filter: drop-shadow(0 0 6px #007bffaa);
+}
+
+.avatar:hover {
+  transform: scale(1.05) rotate(3deg);
+}
+
+section {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+section.active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  position: relative;
+}
+
+#home .description {
+  max-width: 700px;
+  margin: 0 auto 25px;
+  font-size: 1.15rem;
+  text-align: center;
+}
+
+.socials {
+  display: flex;
+  justify-content: center;
+  gap: 300px;
+  font-size: 1.5rem;
+  user-select: none;
+}
+
+.socials a {
+  text-decoration: none;
+  color: #007bff;
+  transition: color 0.3s ease;
+}
+
+.socials a:hover {
+  color: #0056b3;
+}
+
+#cv h2 {
+  text-align: center;
+  color: #007bff;
+  font-weight: 700;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+#cv .content {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 1rem;
+  color: #444;
+}
+
+#cv .section {
+  margin-top: 30px;
+}
+
+#cv .section h3 {
+  border-bottom: 2px solid #009688;
+  padding-bottom: 5px;
+  margin-bottom: 12px;
+  color: #009688;
+  font-weight: 600;
+}
+
+#cv ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+#cv ul li {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 8px;
+}
+
+#cv ul li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #009688;
+  font-weight: bold;
+  font-size: 1.3rem;
+  line-height: 1;
+  top: 0;
+}
+
+#cv a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+#cv a:hover {
+  text-decoration: underline;
+}
+
+#contact {
+  max-width: 700px;
+  margin: 0 auto 40px;
+}
+
+#contact h2 {
+  text-align: center;
+  color: #007bff;
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background: #f9fbff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 3px 7px rgba(0, 123, 255, 0.1);
+}
+
+label {
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+input, textarea {
+  padding: 10px 12px;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  resize: vertical;
+  transition: border-color 0.3s ease;
+}
+
+input:focus, textarea:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 5px #007bffaa;
+}
+
+button[type="submit"] {
+  background-color: #007bff;
+  color: white;
+  font-weight: 700;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  align-self: flex-start;
+}
+
+button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+/* ✅ Projets styles */
+.projects-list .project {
+  background: #f9f9f9;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-left: 4px solid #007bff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.projects-list .project h3 {
+  margin-top: 0;
+  color: #007bff;
+}
+
+.projects-list .project p {
+  margin: 10px 0;
+}
+
+.projects-list .project a {
+  color: #0056b3;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.projects-list .project a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+  #app {
+    padding: 20px;
+  }
+
+  header {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  button, select {
+    width: 100%;
+    max-width: 220px;
+  }
+
+  #cv h2 {
+    font-size: 1.8rem;
+  }
+
+  #cv .content {
+    font-size: 0.95rem;
+    padding: 0 10px;
+  }
+
+  #cv .section {
+    padding: 15px 20px;
+  }
+
+  #cv .section h3 {
+    font-size: 1.2rem;
+  }
+
+  #cv ul li {
+    font-size: 0.95rem;
+  }
+}
+.download-cv-button {
+  background-color: #d7ccff;
+  color: rgb(108, 38, 230);
+  font-weight: 600;
+  padding: 12px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+}
+
+.download-cv-button:hover {
+  background-color: #0056b3;
+}
+@media (max-width: 700px) {
+  /* Ajustement app container */
+  #app {
+    padding: 15px 15px;
+    margin: 0 10px;
+  }
+
+  /* Header en colonne centré */
+  header {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  /* Boutons et select en pleine largeur max raisonnable */
+  button, select {
+    width: 100%;
+    max-width: 260px;
+  }
+
+  /* Avatar plus petit sur mobile */
+  .avatar {
+    width: 120px;
+    height: 120px;
+    border-width: 3px;
+  }
+
+  /* Texte de présentation plus lisible */
+  .intro-title {
+    font-size: 1.5rem;
+    padding: 1rem 10px;
+  }
+
+  /* Sections projets en colonne */
+  .projects-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  /* Socials : réduire l’espacement */
+  .socials {
+    gap: 15px;
+    font-size: 1.2rem;
+  }
+
+  /* Ajustements pour la section CV */
+  #cv h2 {
+    font-size: 1.6rem;
+  }
+
+  #cv .content {
+    font-size: 0.9rem;
+    padding: 0 8px;
+  }
+
+  #cv ul li {
+    font-size: 0.9rem;
+  }
+
+  /* Bouton télécharger CV */
+  .download-cv-button {
+    font-size: 0.9rem;
+    padding: 10px 16px;
+  }
+}
+
+/* Pour écrans vraiment petits (smartphones < 400px) */
+@media (max-width: 400px) {
+  header {
+    padding: 0 10px;
+  }
+
+  button, select {
+    max-width: 100%;
+    font-size: 0.9rem;
+    padding: 8px 12px;
+  }
+
+  .intro-title {
+    font-size: 1.2rem;
+  }
+
+  .avatar {
+    width: 100px;
+    height: 100px;
+    border-width: 2px;
+  }
+}
+/* Hamburger icon */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: #007bff;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* Menu normal desktop */
+header nav {
+  display: flex;
+  gap: 15px;
+}
+
+/* Mobile version */
+@media (max-width: 700px) {
+  .hamburger {
+    display: flex;
+  }
+
+  header nav {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    background: #f9f9f9;
+    padding: 10px;
+    border-radius: 8px;
+  }
+
+  header nav.open {
+    display: flex;
+  }
+
+  button {
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+  }
+}
+.lang-select {
+  margin-left: auto;
+  position: relative;
+}
+
+.lang-select select {
+  background: #007bff;
+  color: #fff;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  appearance: none;
+  font-size: 0.9rem;
+  transition: background 0.3s ease;
+}
+
+.lang-select select:hover {
+  background: #0056b3;
+}
+
+/* Flèche personnalisée */
+.lang-select select::-ms-expand {
+  display: none;
+}
+
+/* Icône flèche
+.lang-select::after {
+  content: "▼";
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  color: white;
+  pointer-events: none;
+  font-size: 0.6rem;
+} */
+
+/* Version mobile */
+@media (max-width: 700px) {
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .lang-select select {
+    font-size: 0.8rem;
+    padding: 6px 12px;
+  }
+
+  nav.open {
+    margin-top: 10px;
+  }
+}
+.cloud-scene {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  background: linear-gradient(to bottom, #87ceeb, #f0f8ff);
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 30px auto;
+}
+
+.cloud {
+  position: absolute;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow:
+    60px 0px #fff,
+    120px 10px #fff,
+    30px 20px #fff,
+    90px 25px #fff;
+  width: 60px;
+  height: 60px;
+  top: 50%;
+  left: -150px;
+  animation: cloudMove 30s linear infinite;
+  opacity: 0.9;
+}
+
+.cloud:nth-child(2) {
+  top: 30%;
+  animation-duration: 40s;
+  transform: scale(1.2);
+}
+
+.cloud:nth-child(3) {
+  top: 70%;
+  animation-duration: 50s;
+  transform: scale(0.8);
+}
+
+@keyframes cloudMove {
+  from {
+    left: -200px;
+  }
+  to {
+    left: 100%;
+  }
+}
+body::before {
+  content: "";
+  position: fixed;
+  top: -15px;
+  left: -250px;
+  width: 100%;
+  height: 100%;
+  background: url("saad logo's.png") no-repeat center center / contain;
+  opacity: 0.99; /* plus bas = plus discret */
+  filter: blur(12px);
+  z-index: -1; /* reste en arrière-plan */
+}
