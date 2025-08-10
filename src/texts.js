@@ -8,7 +8,7 @@ const texts = {
     cvContent: (
       <>
         <div className="section">
-          <img className="avatar" src="/images/cv.png" alt="Photo de Mohamed Saad Halli" />
+          <img className="avatar" src="/images/saad.png" alt="Photo de Mohamed Saad Halli" />
           <h3>🧑‍💻 Présentation</h3>
           <p>
             Je m'appelle <strong>Mohamed Saad Halli</strong>, diplômé en développement digital avec spécialisation Full-Stack. Depuis mes débuts à l'ISTA Sidi Maârouf à Casablanca, je suis passionné par la technologie et la création de solutions web modernes et efficaces.
