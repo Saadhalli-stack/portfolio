@@ -8,7 +8,9 @@ const texts = {
     cvContent: (
       <>
         <div className="section">
-          <img className="avatar" src="/images/saad.png" alt="Photo de Mohamed Saad Halli" />
+    <img 
+  className="avatar"  src={`${process.env.PUBLIC_URL}/images/saad.png`} alt="Photo de Mohamed Saad Halli" 
+/>
           <h3>🧑‍💻 Présentation</h3>
           <p>
             Je m'appelle <strong>Mohamed Saad Halli</strong>, diplômé en développement digital avec spécialisation Full-Stack. Depuis mes débuts à l'ISTA Sidi Maârouf à Casablanca, je suis passionné par la technologie et la création de solutions web modernes et efficaces.
@@ -74,7 +76,11 @@ const texts = {
     cvContent: (
       <>
         <div className="section">
-          <img className="avatar" src="/saad.png" alt="Photo of Mohamed Saad Halli" />
+      <img 
+  className="avatar" 
+  src={`${process.env.PUBLIC_URL}/images/saad.png`} 
+  alt="Photo de Mohamed Saad Halli" 
+/>
           <h3>🧑‍💻 Introduction</h3>
           <p>
             My name is <strong>Mohamed Saad Halli</strong>, a graduate in digital development with a specialization in Full-Stack. Since my early studies at ISTA Sidi Maârouf in Casablanca, I have been passionate about technology and creating modern and efficient web solutions.
@@ -140,7 +146,11 @@ const texts = {
     cvContent: (
       <>
         <div className="section">
-          <img className="avatar" src="/saad.png" alt="Foto von Mohamed Saad Halli" />
+         <img 
+  className="avatar" 
+  src={`${process.env.PUBLIC_URL}/images/saad.png`} 
+  alt="Photo de Mohamed Saad Halli" 
+/>
           <h3>🧑‍💻 Vorstellung</h3>
           <p>
             Ich heiße <strong>Mohamed Saad Halli</strong> und habe einen Abschluss in digitaler Entwicklung mit Spezialisierung auf Full-Stack. Seit meinem Studium am ISTA Sidi Maârouf in Casablanca bin ich begeistert von Technologie und der Entwicklung moderner, effizienter Weblösungen.
@@ -206,7 +216,11 @@ const texts = {
     cvContent: (
       <div dir="rtl" style={{ textAlign: "right" }}>
         <div className="section">
-          <img className="avatar" src="/saad.png" alt="صورة محمد سعد هلي" />
+       <img 
+  className="avatar" 
+  src={`${process.env.PUBLIC_URL}/images/saad.png`} 
+  alt="Photo de Mohamed Saad Halli" 
+/>
           <h3>🧑‍💻 مقدمة</h3>
           <p>
             أنا <strong>محمد سعد هلي</strong>، حاصل على دبلوم في التطوير الرقمي بتخصص Full-Stack. منذ دراستي في ISTA سيدي معروف بالدار البيضاء، وأنا شغوف بالتكنولوجيا وإنشاء حلول ويب حديثة وفعالة.
