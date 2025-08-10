@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Portfolio/static/css/main.2bd4818a.css",
+    "main.js": "/Portfolio/static/js/main.f77e9c8c.js",
+    "static/media/contact.png": "/Portfolio/static/media/contact.afd06f56d2d8d313a374.png",
+    "static/media/saad logo's.png": "/Portfolio/static/media/saad logo's.997cf24d82ad4c6c3e69.png",
+    "index.html": "/Portfolio/index.html",
+    "main.2bd4818a.css.map": "/Portfolio/static/css/main.2bd4818a.css.map",
+    "main.f77e9c8c.js.map": "/Portfolio/static/js/main.f77e9c8c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2bd4818a.css",
+    "static/js/main.f77e9c8c.js"
+  ]
+}
